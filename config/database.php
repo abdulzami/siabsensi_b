@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Str;
 
-$DATABSE_URL = parse_url('DATABASE_URL');
-
 return [
 
     /*
@@ -47,7 +45,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
+            // 'url' => env('DATABASE_URL'),
+            // 'host' => isset($DATABSE_URL['host']) ? $DATABSE_URL['host'] : null ,
+            // 'port' => isset($DATABSE_URL['port']) ? $DATABSE_URL['port'] : null,
+            // 'database' => isset($DATABSE_URL['path']) ? ltrim($DATABSE_URL['path']."/") : null,
+            // 'username' => isset($DATABSE_URL['user']) ? $DATABSE_URL['user'] : null,
+            // 'password' => isset($DATABSE_URL['pass']) ? $DATABSE_URL['pass'] : null,
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
@@ -68,15 +71,15 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
-            'host' => isset($DATABSE_URL['host']) ? $DATABSE_URL['host'] : null ,
-            'port' => isset($DATABSE_URL['port']) ? $DATABSE_URL['port'] : null,
-            'database' => isset($DATABSE_URL['path']) ? ltrim($DATABSE_URL['path']."/") : null,
-            'username' => isset($DATABSE_URL['user']) ? $DATABSE_URL['user'] : null,
-            'password' => isset($DATABSE_URL['pass']) ? $DATABSE_URL['pass'] : null,
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
-            'schema' => 'public',
+            'search_path' => 'public',
             'sslmode' => 'prefer',
         ],
 
