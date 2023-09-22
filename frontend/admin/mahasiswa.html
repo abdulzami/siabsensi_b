@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Students</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/dataTables.bootstrap4.css">
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-light bg-white">
+        <div class="container-fluid">
+            <div class="float-start">
+                <a href="index.html" role="button" aria-expanded="false"><i class="bi-house-door"
+                        style="font-size: 1.5rem; color:black"></i></a>
+            </div>
+            <div class="float-none">
+                <h5><span class="badge bg-dark">Sistem Informasi Absensi <br></span></h5>
+            </div>
+            <div class="float-end">
+                <i class="bi bi-box-arrow-right" id="logout_button" style="font-size: 1.5rem; "></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <p class="h3 mb-4">Students Data Manage</p>
+        <a class="btn btn-light border border-dark" href="create_mahasiswa.html" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" class="mb-1" height="16" fill="currentColor"
+                class="bi bi-person-plus" viewBox="0 0 16 16">
+                <path
+                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                <path fill-rule="evenodd"
+                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+            </svg>
+            Create
+        </a>
+
+        <div class="table-responsive mt-3 border border-1 p-2">
+            <table class="table table-striped table-bordered" style="width:100%" id="the_table">
+                <thead>
+                    <th>Number</th>
+                    <th>NIM</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Handphone Numbers</th>
+                    <th>Majors</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </thead>
+                <tbody class="tbody" id='the_tbody'>
+                    <tr>
+                        <td colspan="9"><span class="badge bg-primary">Getting data from server ...</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <nav class="navbar fixed-bottom navbar-light bg-white">
+        <div class="container-fluid">
+            <div class="copyright">
+                <p>&copy 2021 - Kelompok 4 RPL</p>
+            </div>
+        </div>
+    </nav>
+
+    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/js/axios/axios.js"></script>
+    <script src="../assets/js/sweetalert2/sweetalert2.all.js"></script>
+    <script src="../assets/js/script/localStorage.js"></script>
+    <script src="../assets/js/script/tokenCheck.js"></script>
+    <script src="../assets/js/script/mahasiswa/getMahasiswa.js"></script>
+    <script src="../assets/js/script/mahasiswa/deleteMahasiswa.js"></script>
+    <script src="../assets/js/script/logout.js"></script>
+</body>
+
+</html>
