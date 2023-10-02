@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "SI Absensi",
+  "short_name": "SI Absensi",
+  "version": "io.cordova.siabsensi4",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "author": "Team 4 RPL",
+  "icons": [],
+  "start_url": "index.html"
+}
